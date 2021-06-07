@@ -1,0 +1,111 @@
+<title>Cadastrar-se</title>
+{% extends "base.html"%}
+{% block content %}
+<div class="mb-5">
+    <h2 class="mt-4 mb-4 text-center">CRIAR CONTA</h2>
+    <div class="form-group">
+        <div class="mt-4">
+            <p class="mb-0">Dados pessoais</p>
+            <hr>
+        </div>
+        <form class="form" method="POST" action="/cadastro">
+            <!-- Nome e sobrenonme -->
+            <div class="row mb-3">
+                <div class="col ">
+                    <label for="inputNome" class="form-label">Nome</label>
+                    <input type="text" name="inputNome" id="inputNome" class="form-control" required
+                        placeholder="Primerio nome">
+                </div>
+                <div class="col">
+                    <label for="inputSobrenome" class="form-label">Sobrenome</label>
+                    <input type="text" name="inputSobrenome" id="inputSobrenome" class="form-control col-xs-2" required
+                        placeholder="Sobrenome">
+                </div>
+            </div>
+
+            <!-- Email e Senha -->
+            <div class="row mb-3">
+                <div class="w-50">
+                    <label for="inputEmail" class="form-label ">Email</label>
+                    <input type="email" name="inputEmail" id="inputEmail" class="form-control w-100" required
+                        placeholder="email@exemplo.com">
+                </div>
+                <div class="col">
+                    <label for="inputSenha" class="form-label">Senha</label>
+                    <input type="password" name="inputSenha" id="inputSenha" class="form-control" required>
+                </div>
+                <div class="col">
+                    <label for="inputConfirmaSenha" class="form-label">Repetir Senha</label>
+                    <input type="password" name="inputConfirmaSenha" id="inputConfirmaSenha" class="form-control"
+                        required>
+                </div>
+            </div>
+
+            <!-- CPF e Data de Nascimento -->
+            <div class="row">
+                <div class="col">
+                    <label for="inputCpf" class="form-label">CPF</label>
+                    <input type="text" name="inputCpf" id="inputCpf" class="form-control" required
+                        placeholder="00000000000">
+                </div>
+                <div class="col">
+                    <label for="inputDataDeNascimento" class="form-label">Data de nascimento</label>
+                    <input type="Date" name="inputDataDeNascimento" id="inputDataDeNascimento" class="form-control"
+                        required placeholder="12/12/1995">
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <p class="mb-0">Endereço
+                <p>
+                    <hr>
+            </div>
+
+            <div class="row mb-3">
+                <!-- Cep e Rua  -->
+                <div class="col">
+                    <label for="inputCep" class="form-label">CEP</label>
+                    <input type="text" name="inputCep" id="inputCep" class="form-control" required
+                        placeholder="76123-36">
+                </div>
+                <div class="col">
+                    <label for="inputRua" class="form-label">Rua</label>
+                    <input type="text" name="inputRua" id="inputRua" class="form-control" required
+                        placeholder="Rua 12 de novembro">
+                </div>
+            </div>
+
+            <!-- Bairro, numero e referência  -->
+            <div class="row mb-3">
+                <div class="w-25">
+                    <label for="inputBairro" class="form-label">Bairro</label>
+                    <input type="text" name="inputBairro" id="inputBairro" class="form-control" required
+                        placeholder="Centro">
+                </div>
+                <div class="w-25">
+                    <label for="inputNumero" class="form-label">Numero</label>
+                    <input type="text" name="inputNumero" id="inputNumero" class="form-control" required
+                        placeholder="2587">
+                </div>
+                <div class=" col">
+                    <label for="inputReferencia" class="form-label">Referência</label>
+                    <input type="text" name="inputReferencia" id="inputReferencia" class="form-control" required
+                        placeholder="Ao lado do mercado Santa Rosa">
+                </div>
+            </div>
+
+            <!--Telefone  -->
+            <div class="row mb-3">
+                <div class="w-25">
+                    <label for="inputTelefone" class="form-label">Telefone</label>
+                    <input type="text" name="inputTelefone" id="inputTelefone" class="form-control" required
+                        placeholder="69 9 9334 5678">
+                </div>
+            </div>
+            <div class="col-12 d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -30,9 +30,7 @@ migrate = Migrate(app, db, compare_type=True)
 manager = Manager(app)
 manager.add_command("db", MigrateCommand)
 
+login_manager = LoginManager(app)
+login_manager.init_app(app)
 
-from src.models.tables import Usuario
-from src.models.tables import OrdemDeServico
-from src.models.tables import TipoDeServico
-from src.models.tables import Endereco
-from src.models.tables import Status
+from src.controllers import usuario

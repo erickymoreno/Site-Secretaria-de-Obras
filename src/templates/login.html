@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="mt-5 d-flex justify-content-center">
+    <div class="mt-5 card p-3">
+        <h2 class="text-center">Login</h2>
+        <form action="/login" method="POST" class="row">
+            <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail" name="inputEmail" required>
+            </div>
+            <div class="mb-3">
+                <label for="inputSenha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="inputSenha" name="inputSenha" required>
+            </div>
+            {% if mensagem %}
+            <p class="alert alert-danger d-flex w-auto ms-3"> 
+                {{mensagem}}
+            </p>
+            {% endif %}
+            <div class=" d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary w-50">Entrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
